@@ -6,7 +6,7 @@ import GlobalStyles from './index.css';
 
 import theme from 'utils/theme';
 
-import { Navigation } from 'components';
+import { Navigation, Wrapper } from 'components';
 
 function App() {
   return (
@@ -19,14 +19,21 @@ function App() {
             { content: 'Homepage', to: '/' },
             { content: 'Budget', to: '/budget' },
           ]}
+          RightElement={
+            <div>
+              <button>en</button>
+              <button>pl</button>
+            </div>
+          }
         />
-
-        <Switch>
-          <Route exact path='/'>
-            Homepage
-          </Route>
-          <Route path='/budget'>Budget</Route>
-        </Switch>
+        <Wrapper>
+          <Switch>
+            <Route exact path='/'>
+              Homepage
+            </Route>
+            <Route path='/budget'>Budget</Route>
+          </Switch>
+        </Wrapper>
       </Router>
     </ThemeProvider>
   );
