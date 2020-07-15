@@ -7,7 +7,7 @@ import GlobalStyles from './index.css';
 
 import theme from 'utils/theme';
 
-import { Navigation, Wrapper, LoadingSpinner } from 'components';
+import { Navigation, Wrapper, LoadingSpinner, Button } from 'components';
 
 function App() {
   const { i18n } = useTranslation();
@@ -24,11 +24,22 @@ function App() {
           ]}
           RightElement={
             <div>
-              <button onClick={() => i18n.changeLanguage('en')}>en</button>
-              <button onClick={() => i18n.changeLanguage('pl')}>pl</button>
+              <Button
+                variant='regular'
+                onClick={() => i18n.changeLanguage('en')}
+              >
+                en
+              </Button>
+              <Button
+                variant='regular'
+                onClick={() => i18n.changeLanguage('pl')}
+              >
+                pl
+              </Button>
             </div>
           }
         />
+
         <Wrapper>
           <Switch>
             <Route exact path='/'>
