@@ -4,6 +4,10 @@ import { normalize } from 'styled-normalize';
 export default createGlobalStyle`
 ${normalize}
 
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 ul {
   list-style: none;
   margin: 0;

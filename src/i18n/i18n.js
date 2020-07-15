@@ -3,9 +3,10 @@ import { initReactI18next } from 'react-i18next';
 
 import CustomBackend from './CustomBackend';
 import LanguageDetector from 'i18next-browser-languagedetector';
+require('dotenv').config();
 
-const token = 'a65a80a5524963fba3430203d76b0606';
-const id = '355827';
+const token = process.env.REACT_APP_POE_TOKEN;
+const id = process.env.REACT_APP_POE_ID;
 
 i18n
   .use(CustomBackend)
@@ -63,7 +64,7 @@ i18n
     },
 
     interpolation: {
-      escapeValue: false,
+      escapeValue: false, // not needed for react as it escapes by default
     },
   });
 

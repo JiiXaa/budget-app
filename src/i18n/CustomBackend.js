@@ -11,6 +11,7 @@ class CustomBackend extends Backend {
       lng: language,
       ns: namespace,
     });
+
     if (typeof this.options.loadPath === 'function') {
       loadPath = this.options.loadPath([language], [namespace]);
     }
